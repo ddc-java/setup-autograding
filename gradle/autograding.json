@@ -1,0 +1,28 @@
+{
+  "tests": [
+    {
+      "name": "Test squares",
+      "run": "./gradlew test -build-file autograding.gradle --tests SquareTest.isPerfectSquare_square -PreportName=squares",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Test non-squares",
+      "run": "./gradlew test -build-file autograding.gradle --tests SquareTest.isPerfectSquare_nonSquare -PreportName=non-squares",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Test negatives (exceptions)",
+      "run": "./gradlew test --build-file autograding.gradle --tests SquareTest.isPerfectSquare_negative -PreportName=negatives",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test submitted",
+      "run": "./gradlew test",
+      "timeout": 10,
+      "points": 0
+    }
+  ]
+}
